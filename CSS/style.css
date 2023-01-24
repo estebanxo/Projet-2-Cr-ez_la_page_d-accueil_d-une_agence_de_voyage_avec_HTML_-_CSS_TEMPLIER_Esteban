@@ -6,6 +6,7 @@
     --gris: #f2f2f2;
     --grisFonce:#d9d9d9;
     --white:#ffffff;
+    --black:#000000;
 }
 * {
     font-family: 'Raleway', sans-serif;
@@ -27,7 +28,7 @@ h4 {
 }
 .btn a {
     text-decoration: none;
-    color: #000000;
+    color: var(--black);
 }
 .navbar {
     display: flex;
@@ -49,7 +50,6 @@ header {
     align-items: center;
 }
 .icon i, .btnR {
-    /* background: var(--gris); */
     padding: 14px 16px;
 }
 .icon i {
@@ -63,6 +63,7 @@ header {
     border: none;
     font-weight: 700;
     letter-spacing: 0.7px;
+    cursor: pointer;
 }
 #search {
     border-color: var(--gris);
@@ -70,7 +71,7 @@ header {
     padding: 12px 16px;
 }
 #search, ::placeholder {
-    color: #000000;
+    color: var(--black);
     font-weight: 700;
 }
 .container {
@@ -102,9 +103,6 @@ header {
     border: solid var(--grisFonce) 3px;
     border-radius: 50px;
 }
-.itemContainer p {
-    font-size: 14px;
-}
 .icon-bleu {
     color: var(--bleu);
 }
@@ -114,13 +112,39 @@ header {
 .chart-line-bleu {
     color: var(--bleu);
 }
+.accommodation h4, .accommodation p {
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 15px;
+}
+.popularAccommodation h4 {
+    margin-left: 15px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.divPopular p {
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+.itemContainer p {
+    font-size: 14px;
+    margin-left: 15px;
+}
+.star {
+    margin-left: 15px;
+}
+.divPopular div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
 .itemContainer {
     display: flex;
     justify-content: center;
     gap: 40px;
     margin: 0 50px 0 50px;
 }
-.popularAccommodation1, .accommodation div {
+.popularAccommodation1 div, .accommodation div {
     background: var(--white);
     border-radius: 20px;
 }
@@ -148,14 +172,6 @@ header {
     grid-template-rows: 1fr 1fr;
     gap: 30px;
 }
-/* .accommodation1 {
-    display: flex;
-    justify-content: space-around;
-} */
-/* .accommodation2 {
-    display: flex;
-    justify-content: space-around;
-} */
 .accommodation, .popularAccommodation {
     height: 626px;
 }
@@ -164,19 +180,23 @@ header {
     height: 199px;
     padding: 5px;
 }
-.popularAccommodation1 div {
+.divPopular {
     width: 343px;
     height: 144px;
     padding: 5px;
+    display: flex;
+    /* flex-wrap: wrap; */
 }
 .accommodation img {
+    object-fit: cover;
     width: 246px;
     height: 124px;
     border-radius: 20px 20px 0 0;
 }
 .popularAccommodation img {
-    width: 147px;
-    height: 154px;
+    object-fit: cover;
+    width: 137px;
+    height: 144px;
     border-radius: 20px 0 0 20px;
 }
 .logoTitle {
@@ -186,5 +206,51 @@ header {
     align-items: center;
 }
 .logoTitle h2 {
-    margin-bottom: 0;
+    margin-bottom: 9px;
+    margin-top: 9px;
+}
+.accommodation h3 {
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+.divActivites {
+    width: 302px;
+    height: 445px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px var(--grisFonce);
+}
+.divActivites img {
+    object-fit: cover;
+    width: 302px;
+    height: 389px;
+    border-radius: 20px 20px 0 0;
+}
+.divActivites h4 {
+    margin: 15px 0 15px 15px;
+}
+.activites {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.activitesH2 {
+    margin-left: 50px;
+    margin-top: 60px;
+}
+.footContainer {
+    display: flex;
+    justify-content: space-between;
+    margin: 60px 50px 0 50px;
+    padding: 45px 320px 40px 70px;
+    background: var(--gris);
+}
+.link {
+    display: flex;
+    flex-direction: column;
+}
+.link a {
+    text-decoration: none;
+    color: var(--black);
+    margin-bottom: 12px;
 }
