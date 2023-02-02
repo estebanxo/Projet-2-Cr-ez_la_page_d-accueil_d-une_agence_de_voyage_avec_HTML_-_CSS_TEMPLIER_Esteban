@@ -1,6 +1,7 @@
 /* Auteur : Esteban TEMPLIER */
 
 :root {
+    --bleuBoxShadow:#0065fc4f;
     --bleu: #0065fc;
     --bleuClaire: #deebff;
     --gris: #f2f2f2;
@@ -18,17 +19,28 @@ h1, H2 {
 h3 {
     font-size: 18px;
 }
+.pointeur {
+    cursor: pointer;
+}
 h4 {
     font-size: 16px;
 }
 .btn {
     list-style: none;
     display: inline;
-    padding-right: 67px;
 }
 .btn a {
     text-decoration: none;
     color: var(--black);
+    padding-top: 22.5px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+a:hover, .link a:hover {
+    color: var(--bleu);
+}
+.btn a:hover{
+    border-top: var(--bleu) solid 2px;
 }
 .navbar {
     display: flex;
@@ -89,6 +101,14 @@ header {
     border: solid var(--grisFonce) 3px;
     border-radius: 25px;
     padding: 15px 30px;
+    user-select: none;
+}
+.container div label span:hover {
+    background: var(--bleuClaire);
+    transition: 0.3s;
+}
+.container div label input[type="checkbox"]:checked ~ span {
+    background: var(--bleuClaire);
 }
 .container div label span i {
     padding-right: 5px;
@@ -138,10 +158,14 @@ header {
     flex-direction: column;
     justify-content: space-around;
 }
+.itemContainer a, .activites a {
+    text-decoration: none;
+    color: var(--black);
+}
 .itemContainer {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 2%;
     margin: 0 50px 0 50px;
 }
 .popularAccommodation1 div, .accommodation div {
@@ -155,25 +179,30 @@ header {
     padding: 20px;
 }
 .popularAccommodation1 {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .accommodation {
     background: var(--gris);
     border-radius: 20px;
-    flex: 2;
+    flex: 2.3;
     padding: 20px;
 }
 .accommodation1 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 .accommodation, .popularAccommodation {
     height: 626px;
+}
+.accommodation div, .divPopular {
+    cursor: pointer;
+}
+.accommodation div:hover, .divPopular:hover, .divActivites:hover {
+    box-shadow: 0 0 30px var(--bleuBoxShadow);
+    transition: 0.3s;
 }
 .accommodation div {
     width: 246px;
@@ -185,7 +214,6 @@ header {
     height: 144px;
     padding: 5px;
     display: flex;
-    /* flex-wrap: wrap; */
 }
 .accommodation img {
     object-fit: cover;
