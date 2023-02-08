@@ -13,14 +13,14 @@
     font-family: 'Raleway', sans-serif;
     max-width: 1400px;
 }
+body {
+    margin: 8 0 0 0;
+}
 h1, H2 {
     font-size: 22px;
 }
 h3 {
     font-size: 18px;
-}
-.pointeur {
-    cursor: pointer;
 }
 h4 {
     font-size: 16px;
@@ -48,11 +48,11 @@ a:hover, .link a:hover {
     align-items: center;
 }
 .navbar img {
-    margin-left: 46px;
+    margin-left: 50px;
 }
 
 header {
-    margin-left: 42px;
+    margin-left: 50px;
 }
 .title {
     margin-top: 47px;
@@ -67,6 +67,9 @@ header {
 .icon i {
     background: var(--gris);
     border-radius: 15px 0 0 15px;
+}
+.btnri {
+    display: none;
 }
 .btnR {
     border-radius: 0 15px 15px 0;
@@ -87,9 +90,13 @@ header {
     font-weight: 700;
 }
 .container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.container, .filtre1 {
     display: flex;
     align-items: center;
-    margin-top: 30px;
+    font-weight: 700;
 }
 .container div label {
     cursor: pointer;
@@ -100,8 +107,9 @@ header {
 .container div label span {
     border: solid var(--grisFonce) 3px;
     border-radius: 25px;
-    padding: 15px 30px;
+    padding: 10px 20px;
     user-select: none;
+    flex-wrap: nowrap;
 }
 .container div label span:hover {
     background: var(--bleuClaire);
@@ -116,22 +124,43 @@ header {
 }
 .filtre {
     padding-right: 45px;
+    white-space: nowrap;
 }
-.infos i {
+.container h3 {
+    margin: 0;
+}
+.fa-info {
     margin-right: 15px;
     padding: 5px 10px;
     border: solid var(--grisFonce) 3px;
     border-radius: 50px;
+    color: var(--bleu);
 }
+.infos {
+    display: flex;
+    align-items: center;
+}
+
+/*                      Les étoiles                        */
+
 .icon-bleu {
     color: var(--bleu);
 }
 .icon-gris {
     color: var(--gris);
 }
+.star {
+    margin-left: 15px;
+} 
+
+/*         La couleur de l'icone dans "les plus populaires"           */
+
 .chart-line-bleu {
     color: var(--bleu);
 }
+
+/*               Modification de titre et de paragraphe et link             */
+
 .accommodation h4, .accommodation p {
     margin-top: 3px;
     margin-bottom: 3px;
@@ -150,39 +179,33 @@ header {
     font-size: 14px;
     margin-left: 15px;
 }
-.star {
-    margin-left: 15px;
-}
-.divPopular div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
 .itemContainer a, .activites a {
     text-decoration: none;
     color: var(--black);
 }
+
+
+
 .itemContainer {
     display: flex;
     justify-content: center;
     gap: 2%;
     margin: 0 50px 0 50px;
 }
-.popularAccommodation1 div, .accommodation div {
+
+.divPopular, .accommodation div {
     background: var(--white);
+    box-shadow: 0 0 30px var(--grisFonce);
     border-radius: 20px;
+    cursor: pointer;
+
 }
-.popularAccommodation {
-    background: var(--gris);
-    border-radius: 20px;
-    flex: 1;
-    padding: 20px;
-}
-.popularAccommodation1 {
+.divPopular div {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: space-around;
 }
+
 .accommodation {
     background: var(--gris);
     border-radius: 20px;
@@ -194,39 +217,48 @@ header {
     flex-wrap: wrap;
     gap: 20px;
 }
-.accommodation, .popularAccommodation {
-    height: 626px;
+.accommodation1 a {
+    flex: 1;
 }
-.accommodation div, .divPopular {
-    cursor: pointer;
-}
-.accommodation div:hover, .divPopular:hover, .divActivites:hover {
-    box-shadow: 0 0 30px var(--bleuBoxShadow);
-    transition: 0.3s;
-}
-.accommodation div {
-    width: 246px;
-    height: 199px;
+.accommodation1 div {
+    min-width: 210px;
+    width: 96%;
+    height: 96%;
     padding: 5px;
-}
-.divPopular {
-    width: 343px;
-    height: 144px;
-    padding: 5px;
-    display: flex;
 }
 .accommodation img {
     object-fit: cover;
-    width: 246px;
+    width: 100%;
     height: 124px;
     border-radius: 20px 20px 0 0;
 }
+.pointeur {
+    cursor: pointer;
+}
+
+
+.popularAccommodation {
+    background: var(--gris);
+    border-radius: 20px;
+    flex: 1;
+    padding: 20px;
+}
+.popularAccommodation1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.divPopular {
+    padding: 5px;
+    display: flex;
+}
 .popularAccommodation img {
     object-fit: cover;
-    width: 137px;
+    width: 40%;
     height: 144px;
     border-radius: 20px 0 0 20px;
 }
+
 .logoTitle {
     padding: 10px;
     display: flex;
@@ -237,30 +269,45 @@ header {
     margin-bottom: 9px;
     margin-top: 9px;
 }
-.accommodation h3 {
+.pointeur {
     margin-top: 60px;
     margin-bottom: 40px;
 }
+
+
+.accommodation div:hover, .divPopular:hover, .divActivites:hover {
+    box-shadow: 0 0 30px var(--bleuBoxShadow);
+    transition: 0.3s;
+}
+
+
 .divActivites {
-    width: 302px;
+    max-width: 302px;
     height: 445px;
     border-radius: 20px;
     box-shadow: 1px 1px 10px var(--grisFonce);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 .divActivites img {
     object-fit: cover;
-    width: 302px;
-    height: 389px;
+    width: 100%;
+    height: 85%;
     border-radius: 20px 20px 0 0;
 }
 .divActivites h4 {
-    margin: 15px 0 15px 15px;
+    margin: auto;
+    padding: 5px;
 }
 .activites {
     margin-left: 50px;
     margin-right: 50px;
     display: flex;
-    justify-content: space-between;
+    gap: 50px;
+}
+.activites a {
+    flex: 1;
 }
 .activitesH2 {
     margin-left: 50px;
@@ -269,9 +316,13 @@ header {
 .footContainer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     margin: 60px 50px 0 50px;
-    padding: 45px 320px 40px 70px;
+    padding: 5% 20% 3% 8%;
     background: var(--gris);
+}
+.footContainer1 {
+    margin: 10px;
 }
 .link {
     display: flex;
@@ -281,4 +332,166 @@ header {
     text-decoration: none;
     color: var(--black);
     margin-bottom: 12px;
+}
+@media screen and (max-width: 992px) {
+    .filtre {
+        padding-right: 3%;
+        transition: 0.3s;
+    }
+    .container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    .itemContainer {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .popularAccommodation {
+        height: 278px;
+    }
+    .popularAccommodation1 a {
+        flex: 1;
+    }
+    .popularAccommodation1 {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .divActivites {
+        height: 267px;
+        transition: 0.3s;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    header {
+        margin-left: 20px;
+    }
+    .navbar {
+        flex-direction: column;
+    }
+    .navbar img {
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .nav-links {
+        width: 100%;
+        padding-left: 0;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        transition: 0.3s;
+    }
+    .btn a {
+        padding: 22.5px 45px;
+        border-bottom: var(--grisFonce) solid 2px;
+        flex: 1;
+    }
+    .btn a:hover{
+        border-top: none;
+        border-bottom: var(--bleu) solid 2px;
+    }
+    .title {
+        margin-top: 35px;
+    }
+    .btnri {
+        padding: 13px 16px;
+        border-radius: 0 15px 15px 0;
+        background: var(--bleu);
+        color: var(--white);
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+        display: inline-block;
+    }
+    .btnR {
+        display: none;
+    }
+    .container {
+        transition: 0.3s;
+        margin-bottom: 0;
+        flex-direction: column;
+        align-items: baseline;
+        transition: 0.3s;
+    }
+    .filtre1 {
+        flex-wrap: wrap;
+    }
+    .filtre1 div {
+        transition: 0.3s;
+        margin-bottom: 40px;
+        flex: 1;
+    }
+    .filtre1 div label {
+        /* flex: 1; */
+        display: flex;
+    }
+    .filtre1 div label span {
+        /* padding: 10px 100px 10px 10px; */
+        font-size: 11px;
+        flex: 1;
+    }
+    .container div label span i {
+        font-size: 17px;
+    }
+    #economiqueSpan {
+        padding-right: 54px;
+    }
+    #familialSpan {
+        padding-right: 79px;
+    }
+    #romantiqueSpan {
+        padding-right: 56px;
+    }
+    #animauxAutorisésSpan {
+        padding-right: 23px;
+    }
+    .itemContainer {
+        margin: 0;
+    }
+    .accommodation {
+        order: 2;
+    }
+    .popularAccommodation {
+        order: 1;
+        border-radius: 0;
+    }
+    .popularAccommodation1 {
+        flex-direction: column;
+    }
+    .accommodation {
+        background: none;
+    }
+    .pointeur {
+        visibility: hidden;
+        margin-top: 0;
+    }
+    .activites {
+        margin: 0 20px 0 20px;
+        
+        flex-wrap: wrap;
+        gap: 24px;
+    }
+    .activites a {
+        
+    }
+    .divActivites {
+        height: 190px;
+        min-width: 230px;
+        max-width: 100%;
+        transition: 0.3s;
+    }
+    .divActivites img {
+        height: 75%;
+        transition: 0.3s;
+    }
+    .footContainer {
+        margin: 60px 0 0 0;
+        flex-direction: column;
+        transition: 0.3s;
+        align-items: baseline;
+    }
 }

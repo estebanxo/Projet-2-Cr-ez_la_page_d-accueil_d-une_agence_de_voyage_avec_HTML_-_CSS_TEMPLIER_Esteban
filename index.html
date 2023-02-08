@@ -17,16 +17,14 @@
 
     <nav class="navbar">
         <img src="./images/logo/Booki.png" alt="logo_booki" width="61.09px" height="19px">
-        <div class="nav-links">
-            <ul>
-                <li class="btn">
-                    <a href="#hebergements">Hébergements</a>
-                </li>
-                <li class="btn">
-                    <a href="#activites">Activités</a>
-                </li>
-            </ul>
-        </div>
+        <ul class="nav-links">
+            <li class="btn">
+                <a href="#hebergements" id="hebergements">Hébergements</a>
+            </li>
+            <li class="btn">
+                <a href="#activites" id="activites">Activités</a>
+            </li>
+        </ul>
     </nav>
     <main>
         <header>
@@ -53,41 +51,49 @@
                         <button class="btnR" type="submit">
                             <span>Rechercher</span> 
                         </button>
+                        <button class="btnri" type="submit">
+                            <span><i class="fa-sharp fa-solid fa-magnifying-glass"></i></span>
+                        </button>
                     </div>
                 </div>
                 
                 <div class="container">
                     <h3 class="filtre">Filtres</h3>
-                    <div class="filtre">
-                        <label for="economique">
-                            <input type="checkbox" name="economique" id="economique">
-                            <span><i class="fa-solid fa-money-bill-wave"></i>Economique</span>
-                        </label>
-                    </div>
-                    <div class="filtre">
-                        <label for="familial">
-                            <input type="checkbox" name="familial" id="familial">
-                            <span><i class="fa-solid fa-person"></i>Familial</span>
-                        </label>
-                    </div>
-                    <div class="filtre">
-                        <label for="romantique">
-                            <input type="checkbox" name="romantique" id="romantique">
-                            <span><i class="fa-sharp fa-solid fa-heart"></i>Romantique</span>
-                        </label>
-                    </div>
-                    <div class="filtre">
-                        <label for="animauxAutorisés">
-                            <input type="checkbox" name="animauxAutorisés" id="animauxAutorisés" checked>
-                            <span><i class="fa-sharp fa-solid fa-dog"></i>Animaux autorisés</span>
-                        </label>
-                    </div>
+                    <section class="filtre1">
+                        <div class="filtre">
+                            <label for="economique">
+                                <input type="checkbox" name="economique" id="economique">
+                                <span><i class="fa-solid fa-money-bill-wave"></i>Economique</span>
+                            </label>
+                        </div>
+                        <div class="filtre">
+                            <label for="familial">
+                                <input type="checkbox" name="familial" id="familial">
+                                <span><i class="fa-solid fa-person"></i>Familial</span>
+                            </label>
+                        </div>
+                        <div class="filtre">
+                            <label for="romantique">
+                                <input type="checkbox" name="romantique" id="romantique">
+                                <span><i class="fa-sharp fa-solid fa-heart"></i>Romantique</span>
+                            </label>
+                        </div>
+                        <div class="filtre">
+                            <label for="animauxAutorisés">
+                                <input type="checkbox" name="animauxAutorisés" id="animauxAutorisés" checked>
+                                <span><i class="fa-sharp fa-solid fa-dog"></i>Animaux autorisés</span>
+                            </label>
+                        </div>
+                    </section>
                 </div>
             </form>
 
             <!------                        Le paragraphe avec son logo                          --------->
 
-            <p class="infos"><i class="fa-solid fa-info"></i>Plus de 500 logements sont disponibles dans cette ville</p>
+            <div class="infos">
+                <i class="fa-solid fa-info"></i>
+                <p>Plus de 500 logements sont disponibles dans cette ville</p>
+            </div>
 
         </header>
 
@@ -173,7 +179,7 @@
                 </div>
                 <section class="popularAccommodation1">
                     <a href="#">
-                        <div class="divPopular">
+                        <div id="hotel1" class="divPopular">
                             <img src="./images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg" alt="">
                             <div>
                                 <span>
@@ -187,7 +193,7 @@
                         </div>
                     </a>
                     <a href="#">
-                        <div class="divPopular">
+                        <div id="hotel2" class="divPopular">
                             <img src="./images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg" alt="">
                             <div>
                                 <span>
@@ -201,7 +207,7 @@
                         </div>
                     </a>
                     <a href="#">
-                        <div class="divPopular">
+                        <div id="hotel3" class="divPopular">
                             <img src="./images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg" alt="">
                             <div>
                                 <span>
@@ -253,7 +259,7 @@
     </main>
 
     <footer class="footContainer">
-        <div>
+        <div class="footContainer1">
             <h3>À propos</h3>
             <div class="link">
                 <a href="#">Fonctionnement du site</a>
@@ -261,14 +267,14 @@
                 <a href="#">Données et confidentialité</a>
             </div>
         </div>
-        <div>
+        <div class="footContainer1">
             <h3>Nos hébergements</h3>
             <div class="link">
                 <a href="#">Charte qualité</a>
                 <a href="#">Proposer votre hôtel</a>
             </div>
         </div>
-        <div>
+        <div class="footContainer1">
             <h3>Assistance</h3>
             <div class="link">
                 <a href="#">Centre d’aide</a>
