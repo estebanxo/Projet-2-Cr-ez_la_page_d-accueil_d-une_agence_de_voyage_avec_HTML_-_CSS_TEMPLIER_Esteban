@@ -333,6 +333,15 @@ header {
     color: var(--black);
     margin-bottom: 12px;
 }
+@media screen and (min-width: 1400px) {
+    * {
+        max-width: none;
+    }
+    body {
+        width: 1400px;
+        margin: 8px auto;
+    }
+}
 @media screen and (max-width: 992px) {
     .filtre {
         padding-right: 3%;
@@ -376,19 +385,29 @@ header {
     .navbar img {
         margin-top: 20px;
         margin-bottom: 30px;
+        margin-left: 0;
     }
     .nav-links {
         width: 100%;
         padding-left: 0;
         display: flex;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         transition: 0.3s;
     }
+    .nav-links > li {
+        flex: 1 1 auto;
+        display: flex;
+        justify-content: space-around;
+        min-width: 50%;
+        max-width: 50%;
+    }
     .btn a {
-        padding: 22.5px 45px;
+        text-align: center;
+        display: block;
+        min-width: 100%;
+        padding: 22.5px 0;
         border-bottom: var(--grisFonce) solid 2px;
-        flex: 1;
     }
     .btn a:hover{
         border-top: none;
