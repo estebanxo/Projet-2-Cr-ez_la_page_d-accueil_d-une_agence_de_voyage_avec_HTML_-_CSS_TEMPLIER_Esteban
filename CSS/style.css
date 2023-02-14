@@ -1,5 +1,6 @@
 /* Auteur : Esteban TEMPLIER */
 
+/*         Mes "propriétés personnalisé" contenu dans root         */
 :root {
     --bleuBoxShadow:#0065fc4f;
     --bleu: #0065fc;
@@ -9,12 +10,18 @@
     --white:#ffffff;
     --black:#000000;
 }
+
+/*             Modification général             */
+
 * {
     font-family: 'Raleway', sans-serif;
     max-width: 1400px;
 }
 body {
-    margin: 8 0 0 0;
+    margin: 8px 0 0 0;
+}
+header {
+    margin-left: 50px;
 }
 h1, H2 {
     font-size: 22px;
@@ -25,6 +32,9 @@ h3 {
 h4 {
     font-size: 16px;
 }
+
+/*           Bouton de barre de naviguation            */
+
 .btn {
     list-style: none;
     display: inline;
@@ -42,6 +52,9 @@ a:hover, .link a:hover {
 .btn a:hover{
     border-top: var(--bleu) solid 2px;
 }
+
+/*            Logo et son comportement par rapport aux bouttons            */
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -49,14 +62,17 @@ a:hover, .link a:hover {
 }
 .navbar img {
     margin-left: 50px;
+    height: 19px;
 }
 
-header {
-    margin-left: 50px;
-}
+/*       Positionnement du titre     */
+
 .title {
     margin-top: 47px;
 }
+
+/*        La barre de recherche        */
+
 .recherche {
     display: flex;
     align-items: center;
@@ -89,6 +105,9 @@ header {
     color: var(--black);
     font-weight: 700;
 }
+
+/*           Les filtres           */
+
 .container {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -105,18 +124,11 @@ header {
     display: none;
 }
 .container div label span {
-    border: solid var(--grisFonce) 3px;
+    border: var(--grisFonce) 3px solid;
     border-radius: 25px;
     padding: 10px 20px;
     user-select: none;
     flex-wrap: nowrap;
-}
-.container div label span:hover {
-    background: var(--bleuClaire);
-    transition: 0.3s;
-}
-.container div label input[type="checkbox"]:checked ~ span {
-    background: var(--bleuClaire);
 }
 .container div label span i {
     padding-right: 5px;
@@ -129,6 +141,19 @@ header {
 .container h3 {
     margin: 0;
 }
+
+/*       Modification du comportement des filtres via les pseudo class       */
+
+.container div label span:hover {
+    background: var(--bleuClaire);
+    transition: 0.3s;
+}
+.container div label input[type="checkbox"]:checked ~ span {
+    background: var(--bleuClaire);
+}
+
+/*     Le paragraphe et son logo     */
+
 .fa-info {
     margin-right: 15px;
     padding: 5px 10px;
@@ -184,7 +209,7 @@ header {
     color: var(--black);
 }
 
-
+/*       L'article contenant les deux sections        */
 
 .itemContainer {
     display: flex;
@@ -193,18 +218,7 @@ header {
     margin: 0 50px 0 50px;
 }
 
-.divPopular, .accommodation div {
-    background: var(--white);
-    box-shadow: 0 0 30px var(--grisFonce);
-    border-radius: 20px;
-    cursor: pointer;
-
-}
-.divPopular div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
+/*     La section contenant "Hébergement à marseille"     */
 
 .accommodation {
     background: var(--gris);
@@ -212,11 +226,35 @@ header {
     flex: 2.3;
     padding: 20px;
 }
+
+/*     Comportement des boîtes dans "Hébergement à Marseille"     */
+
 .accommodation1 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
+
+/*     Comportement du titre et du paragraphe par rapport aux étoiles dans les boîtes "Les plus populaires"     */
+
+.divPopular div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+/*      Les boîtes dans "Hébergement à Marseille" et "Les plus populaires"      */
+
+.divPopular, .accommodation div {
+    background: var(--white);
+    box-shadow: 0 0 30px var(--grisFonce);
+    border-radius: 20px;
+    cursor: pointer;
+
+}
+
+/*      Les boîtes dans "Hébergement à Marseille"      */
+
 .accommodation1 a {
     flex: 1;
 }
@@ -232,10 +270,8 @@ header {
     height: 124px;
     border-radius: 20px 20px 0 0;
 }
-.pointeur {
-    cursor: pointer;
-}
 
+/*     Les boîtes dans "Les plus populaires"     */
 
 .popularAccommodation {
     background: var(--gris);
@@ -259,6 +295,8 @@ header {
     border-radius: 20px 0 0 20px;
 }
 
+/*       Comportement du titre et du logo dans "Les plus populaires"       */
+
 .logoTitle {
     padding: 10px;
     display: flex;
@@ -269,18 +307,42 @@ header {
     margin-bottom: 9px;
     margin-top: 9px;
 }
+
+/*      Comportement de "Afficher plus" dans "Hébergement à Marseille"      */
+
+.pointeur {
+    cursor: pointer;
+}
 .pointeur {
     margin-top: 60px;
     margin-bottom: 40px;
 }
 
+/* Comportement des boîtes dans "Hébergement à Marseille" dans "Les plus populaires" et dans "Les activités à Marseille" au survol */
 
 .accommodation div:hover, .divPopular:hover, .divActivites:hover {
     box-shadow: 0 0 30px var(--bleuBoxShadow);
     transition: 0.3s;
 }
 
+/*       Le titre "Activités à Marseille"      */
 
+.activitesH2 {
+    margin-left: 50px;
+    margin-top: 60px;
+}
+
+/*      Comportement des boîtes dans "Activités à Marseille"      */
+
+.activites {
+    margin-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    gap: 50px;
+}
+.activites a {
+    flex: 1;
+}
 .divActivites {
     max-width: 302px;
     height: 445px;
@@ -288,7 +350,6 @@ header {
     box-shadow: 1px 1px 10px var(--grisFonce);
     display: flex;
     flex-direction: column;
-    flex: 1;
 }
 .divActivites img {
     object-fit: cover;
@@ -300,19 +361,9 @@ header {
     margin: auto;
     padding: 5px;
 }
-.activites {
-    margin-left: 50px;
-    margin-right: 50px;
-    display: flex;
-    gap: 50px;
-}
-.activites a {
-    flex: 1;
-}
-.activitesH2 {
-    margin-left: 50px;
-    margin-top: 60px;
-}
+
+/*        Le pied de page         */
+
 .footContainer {
     display: flex;
     justify-content: space-between;
@@ -333,6 +384,9 @@ header {
     color: var(--black);
     margin-bottom: 12px;
 }
+
+/*      Comportement de la page pour une largeur >= 1400px      */
+
 @media screen and (min-width: 1400px) {
     * {
         max-width: none;
@@ -342,19 +396,33 @@ header {
         margin: 8px auto;
     }
 }
+
+/*    Comportement de la page pour une largeur <= 992px     */
+
 @media screen and (max-width: 992px) {
+
+/*      Les filtres       */
+
     .filtre {
         padding-right: 3%;
-        transition: 0.3s;
+        transition: 0.5s;
     }
     .container {
         flex-wrap: wrap;
         gap: 20px;
+        transition: 0.5s;
     }
+
+/*       L'article contenant les deux sections        */
+
     .itemContainer {
         flex-direction: column;
         gap: 20px;
+        transition: 0.5s;
     }
+
+/*     La section "Les plus populaires"     */
+
     .popularAccommodation {
         height: 278px;
     }
@@ -366,11 +434,17 @@ header {
         justify-content: space-between;
         gap: 10px;
     }
+
+/*        L'article "Les activités à Marseille"        */
+
     .divActivites {
         height: 267px;
-        transition: 0.3s;
+        transition: 0.5s;
     }
 }
+
+/*       Comportement de la page pour une largeur <= 768px       */
+
 @media screen and (max-width: 768px) {
     body {
         margin-left: 0;
@@ -379,6 +453,7 @@ header {
     header {
         margin-left: 20px;
     }
+
     .navbar {
         flex-direction: column;
     }
@@ -413,9 +488,13 @@ header {
         border-top: none;
         border-bottom: var(--bleu) solid 2px;
     }
+
     .title {
         margin-top: 35px;
     }
+
+/*       Barre de recherche          */
+
     .btnri {
         padding: 13px 16px;
         border-radius: 0 15px 15px 0;
@@ -429,6 +508,9 @@ header {
     .btnR {
         display: none;
     }
+
+/*       Les filtre          */
+
     .container {
         transition: 0.3s;
         margin-bottom: 0;
@@ -445,29 +527,18 @@ header {
         flex: 1;
     }
     .filtre1 div label {
-        /* flex: 1; */
         display: flex;
     }
     .filtre1 div label span {
-        /* padding: 10px 100px 10px 10px; */
         font-size: 11px;
         flex: 1;
     }
     .container div label span i {
         font-size: 17px;
     }
-    #economiqueSpan {
-        padding-right: 54px;
-    }
-    #familialSpan {
-        padding-right: 79px;
-    }
-    #romantiqueSpan {
-        padding-right: 56px;
-    }
-    #animauxAutorisésSpan {
-        padding-right: 23px;
-    }
+
+    /*       L'article contenant les deux sections        */
+
     .itemContainer {
         margin: 0;
     }
@@ -484,18 +555,20 @@ header {
     .accommodation {
         background: none;
     }
+
+/*     Comportement de "Afficher plus" dans "Hébergements à Marseille"     */
+
     .pointeur {
         visibility: hidden;
         margin-top: 0;
     }
+  
+/*          L'article "Activités à Marseille"          */
+
     .activites {
         margin: 0 20px 0 20px;
-        
         flex-wrap: wrap;
         gap: 24px;
-    }
-    .activites a {
-        
     }
     .divActivites {
         height: 190px;
@@ -507,6 +580,9 @@ header {
         height: 75%;
         transition: 0.3s;
     }
+
+/*      Pied de page     */
+
     .footContainer {
         margin: 60px 0 0 0;
         flex-direction: column;
