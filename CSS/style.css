@@ -26,10 +26,10 @@ header {
 h1, H2 {
     font-size: 22px;
 }
-h3 {
+.pointeur, .container h2, .footContainer1 h3 {
     font-size: 18px;
 }
-h4 {
+h3 {
     font-size: 16px;
 }
 
@@ -53,7 +53,7 @@ a:hover, .link a:hover {
     border-top: var(--bleu) solid 2px;
 }
 
-/*            Logo et son comportement par rapport aux bouttons            */
+/*            Logo et son comportement par rapport aux boutons            */
 
 .navbar {
     display: flex;
@@ -134,11 +134,14 @@ a:hover, .link a:hover {
     padding-right: 5px;
     color: var(--bleu);
 }
+.filtre1 {
+    margin-right: 50px;
+}
 .filtre {
     padding-right: 45px;
     white-space: nowrap;
 }
-.container h3 {
+.container h2 {
     margin: 0;
 }
 
@@ -186,12 +189,12 @@ a:hover, .link a:hover {
 
 /*               Modification de titre et de paragraphe et link             */
 
-.accommodation h4, .accommodation p {
+.accommodation h3, .accommodation p {
     margin-top: 3px;
     margin-bottom: 3px;
     margin-left: 15px;
 }
-.popularAccommodation h4 {
+.popularAccommodation h3 {
     margin-left: 15px;
     margin-top: 0;
     margin-bottom: 0;
@@ -255,7 +258,7 @@ a:hover, .link a:hover {
 
 /*      Les boîtes dans "Hébergement à Marseille"      */
 
-.accommodation1 a {
+.accommodationlink {
     flex: 1;
 }
 .accommodation1 div {
@@ -311,9 +314,6 @@ a:hover, .link a:hover {
 /*      Comportement de "Afficher plus" dans "Hébergement à Marseille"      */
 
 .pointeur {
-    cursor: pointer;
-}
-.pointeur {
     margin-top: 60px;
     margin-bottom: 40px;
 }
@@ -357,7 +357,7 @@ a:hover, .link a:hover {
     height: 85%;
     border-radius: 20px 20px 0 0;
 }
-.divActivites h4 {
+.divActivites h3 {
     margin: auto;
     padding: 5px;
 }
@@ -431,7 +431,6 @@ a:hover, .link a:hover {
     }
     .popularAccommodation1 {
         flex-direction: row;
-        justify-content: space-between;
         gap: 10px;
     }
 
@@ -472,15 +471,12 @@ a:hover, .link a:hover {
     }
     .nav-links > li {
         flex: 1 1 auto;
-        display: flex;
-        justify-content: space-around;
         min-width: 50%;
         max-width: 50%;
     }
     .btn a {
         text-align: center;
         display: block;
-        min-width: 100%;
         padding: 22.5px 0;
         border-bottom: var(--grisFonce) solid 2px;
     }
@@ -520,6 +516,7 @@ a:hover, .link a:hover {
     }
     .filtre1 {
         flex-wrap: wrap;
+        margin-right: 0;
     }
     .filtre1 div {
         transition: 0.3s;
